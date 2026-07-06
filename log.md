@@ -47,3 +47,8 @@
 - Notas creadas: [[ClothParamOpt_PBD_JCDE2025]]
 - Notas actualizadas: index.md
 - Contradicciones encontradas: ninguna; resuelve la brecha PBD de [[RealToSim_DynamicFabric_2025]] — primer paper que optimiza k'_s/k'_b/c'/μ directamente sobre simulador particle-based; hereda la limitación de no validar en dinámico
+
+## [2026-07-06] ingest | Effective Cloth Folding Trajectories in Simulation with Only Two Parameters (Frontiers in Neurorobotics, 2022)
+- Notas creadas: [[FoldingTwoParams_FrontNR2022]]
+- Notas actualizadas: index.md
+- Contradicciones encontradas: ninguna; converge con [[ClothParamOpt_PBD_JCDE2025]] en que friction es el parámetro más crítico — evidencia independiente desde FEM/C-IPC y PBD/Taichi
