@@ -29,7 +29,8 @@ _(vacío — pendiente de primer ingest)_
 | [[SoftGym_CoRL2020]] | Benchmark RL estándar para deformables (NVIDIA FleX/PBD); 6 tareas de tela/agua; CEM > SAC > imagen | draft | 2026-07-05 |
 | [[GarmentLab_NeurIPS2024]] | Benchmark NeurIPS 2024 (Isaac Sim, PBD+FEM); 20 tareas; RL <15% vs visión ~60%; sim2real con 3 métodos | draft | 2026-07-06 |
 | [[Petrik_GarmentFolding_IROS2016]] | Modelo Euler-Bernoulli para trayectorias de doblado; parámetro ηᵦ=peso/rigidez; contrasta con PBD | draft | 2026-07-06 |
-| [[RoboVerse_2025]] | Plataforma unificada multi-simulador; patrón Handler+Env (MetaSim); Tabla VI y física pendientes del PDF | draft | 2026-07-06 |
+| [[RoboVerse_2025]] | Plataforma unificada multi-simulador; patrón Handler+Env (MetaSim); Tabla VI completada del PDF | draft | 2026-07-06 |
+| [[RealToSim_DynamicFabric_2025]] | Compara DIFFCLOUD/DiffCP/PhysNet/PINN; parámetros quasi-estáticos no generalizan a dinámico; PBD sin resolver | draft | 2026-07-06 |
 
 ## 06_Code_Snippets
 | Nota | Resumen | Status | Actualizado |

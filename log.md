@@ -36,3 +36,9 @@
 - Notas actualizadas: [[Gym_Wrapper_Genesis]] (sección Handler+Env añadida), index.md, raw/genesis_research_2026-07-05.md (paper añadido a la lista)
 - Contradicciones encontradas: ninguna
 - Nota: Tabla VI (comparativa de simuladores) y experimentos de conservación física no accesibles en HTML — pendiente de completar desde el PDF directamente en [[RoboVerse_2025]]
+
+## [2026-07-06] ingest | Can Real-to-Sim Approaches Capture Dynamic Fabric Behavior for Robotic Fabric Manipulation? (arXiv 2503.16310)
+- Notas creadas: [[RealToSim_DynamicFabric_2025]]
+- Notas actualizadas: index.md
+- Contradicciones encontradas: ninguna; complementa [[Unphased_Wrinkles_2022]] — ese paper calibra quasi-estático, este advierte que esos parámetros no generalizan a dinámico
+- Nota: brecha crítica identificada — ningún método del paper usa PBD como backend; traducción a parámetros Genesis queda sin resolver
