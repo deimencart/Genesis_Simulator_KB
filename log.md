@@ -19,3 +19,8 @@
 - Notas actualizadas: index.md
 - Contradicciones encontradas: ninguna
 - Nota: SoftGym usa FleX/PBD (misma familia que Genesis); parámetros de tela no son portables directamente — requieren recalibración con [[Unphased_Wrinkles_2022]].
+
+## [2026-07-06] ingest | GarmentLab: A Unified Simulation and Benchmark for Garment Manipulation (NeurIPS 2024)
+- Notas creadas: [[GarmentLab_NeurIPS2024]]
+- Notas actualizadas: index.md
+- Contradicciones encontradas: ninguna, pero hallazgo crítico — RL puro obtiene <15% de éxito en tareas de prendas vs. ~60% de métodos vision-based; cuestiona enfoque RL puro en [[Gym_Wrapper_Genesis]]
