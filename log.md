@@ -13,3 +13,9 @@
 - Notas actualizadas: index.md
 - Contradicciones encontradas: ninguna
 - Nota: confirma que Genesis no aparece en este survey por ser posterior a su publicación.
+
+## [2026-07-05] ingest | SoftGym: Benchmarking Deep RL for Deformable Object Manipulation (CoRL 2020)
+- Notas creadas: [[SoftGym_CoRL2020]]
+- Notas actualizadas: index.md
+- Contradicciones encontradas: ninguna
+- Nota: SoftGym usa FleX/PBD (misma familia que Genesis); parámetros de tela no son portables directamente — requieren recalibración con [[Unphased_Wrinkles_2022]].
