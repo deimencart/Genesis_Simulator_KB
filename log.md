@@ -24,3 +24,9 @@
 - Notas creadas: [[GarmentLab_NeurIPS2024]]
 - Notas actualizadas: index.md
 - Contradicciones encontradas: ninguna, pero hallazgo crítico — RL puro obtiene <15% de éxito en tareas de prendas vs. ~60% de métodos vision-based; cuestiona enfoque RL puro en [[Gym_Wrapper_Genesis]]
+
+## [2026-07-06] ingest | Physics-Based Model of a Rectangular Garment for Robotic Folding (Petrik, IROS 2016)
+- Notas creadas: [[Petrik_GarmentFolding_IROS2016]]
+- Notas actualizadas: index.md
+- Contradicciones encontradas: ninguna; modelo Euler-Bernoulli (analítico, estático) contrasta con PBD de [[PBD_Cloth_Solver]] (partículas, dinámico) — son enfoques complementarios, no contradictorios
+- Nota: PDF original ilegible (binario); contenido reconstruido desde papers de seguimiento (arXiv 1902.11021, 1904.01298) y búsqueda web
