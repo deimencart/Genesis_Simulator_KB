@@ -58,3 +58,9 @@
 - Notas actualizadas: index.md
 - Contradicciones encontradas: ninguna
 - Nota: MS-HAB es referencia de arquitectura y throughput (4,109 SPS); no maneja deformables — para cloth seguir [[SoftGym_CoRL2020]] y [[ClothParamOpt_PBD_JCDE2025]]
+
+## [2026-07-06] ingest | Gymnasium: A Standardized Interface for Reinforcement Learning Environments (arXiv 2407.17032)
+- Notas creadas: [[Gymnasium_API_2024]]
+- Notas actualizadas: index.md
+- Contradicciones encontradas: ninguna
+- Nota: marcada como status=validated por ser spec oficial; incluye template de GenesisClothEnv y explicación de terminated vs truncated para bootstrap correcto en RL

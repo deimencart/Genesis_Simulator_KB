@@ -34,6 +34,7 @@ _(vacío — pendiente de primer ingest)_
 | [[ClothParamOpt_PBD_JCDE2025]] | Optimización real-to-sim con PBD/Taichi (UR10); 4 parámetros k'_s, k'_b, c', μ; 4.8× mejor que DIFFCLOUD | draft | 2026-07-06 |
 | [[FoldingTwoParams_FrontNR2022]] | Solo 2 parámetros de trayectoria Bézier (height ratio + tilt); contacto/friction > constitutiva para folding | draft | 2026-07-06 |
 | [[ManiSkill_HAB_2024]] | Benchmark GPU-acelerado (4,109 SPS, 1024 envs); arquitectura SequentialTask; solo rígidos (no cloth) | draft | 2026-07-06 |
+| [[Gymnasium_API_2024]] | Spec oficial de la interfaz Gym: reset/step/render, terminated vs truncated, VectorEnv, custom env template | validated | 2026-07-06 |
 
 ## 06_Code_Snippets
 | Nota | Resumen | Status | Actualizado |
