@@ -35,6 +35,7 @@ _(vacío — pendiente de primer ingest)_
 | [[FoldingTwoParams_FrontNR2022]] | Solo 2 parámetros de trayectoria Bézier (height ratio + tilt); contacto/friction > constitutiva para folding | draft | 2026-07-06 |
 | [[ManiSkill_HAB_2024]] | Benchmark GPU-acelerado (4,109 SPS, 1024 envs); arquitectura SequentialTask; solo rígidos (no cloth) | draft | 2026-07-06 |
 | [[Gymnasium_API_2024]] | Spec oficial de la interfaz Gym: reset/step/render, terminated vs truncated, VectorEnv, custom env template | validated | 2026-07-06 |
+| [[GOG_Gripper_RA_L2024]] | Gripper custom bimanual-con-un-brazo (UR5); folding MIoU=0.917; baja relevancia directa al proyecto | draft | 2026-07-06 |
 
 ## 06_Code_Snippets
 | Nota | Resumen | Status | Actualizado |

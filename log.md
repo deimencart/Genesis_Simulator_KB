@@ -64,3 +64,9 @@
 - Notas actualizadas: index.md
 - Contradicciones encontradas: ninguna
 - Nota: marcada como status=validated por ser spec oficial; incluye template de GenesisClothEnv y explicación de terminated vs truncated para bootstrap correcto en RL
+
+## [2026-07-06] ingest | G.O.G.: A Versatile Gripper-On-Gripper Design for Bimanual Cloth Manipulation with a Single Robotic Arm (IEEE RA-L, 2024)
+- Notas creadas: [[GOG_Gripper_RA_L2024]]
+- Notas actualizadas: index.md
+- Contradicciones encontradas: ninguna
+- Nota: relevancia baja para el proyecto — hardware custom (no 2F-85), UR5 (no UR10e), folding (no unfolding), sin simulación ni Genesis; documentado por completitud del literature review
