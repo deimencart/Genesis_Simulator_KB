@@ -31,6 +31,7 @@ _(vacío — pendiente de primer ingest)_
 | [[Petrik_GarmentFolding_IROS2016]] | Modelo Euler-Bernoulli para trayectorias de doblado; parámetro ηᵦ=peso/rigidez; contrasta con PBD | draft | 2026-07-06 |
 | [[RoboVerse_2025]] | Plataforma unificada multi-simulador; patrón Handler+Env (MetaSim); Tabla VI completada del PDF | draft | 2026-07-06 |
 | [[RealToSim_DynamicFabric_2025]] | Compara DIFFCLOUD/DiffCP/PhysNet/PINN; parámetros quasi-estáticos no generalizan a dinámico; PBD sin resolver | draft | 2026-07-06 |
+| [[ClothParamOpt_PBD_JCDE2025]] | Optimización real-to-sim con PBD/Taichi (UR10); 4 parámetros k'_s, k'_b, c', μ; 4.8× mejor que DIFFCLOUD | draft | 2026-07-06 |
 
 ## 06_Code_Snippets
 | Nota | Resumen | Status | Actualizado |

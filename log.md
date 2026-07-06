@@ -42,3 +42,8 @@
 - Notas actualizadas: index.md
 - Contradicciones encontradas: ninguna; complementa [[Unphased_Wrinkles_2022]] — ese paper calibra quasi-estático, este advierte que esos parámetros no generalizan a dinámico
 - Nota: brecha crítica identificada — ningún método del paper usa PBD como backend; traducción a parámetros Genesis queda sin resolver
+
+## [2026-07-06] ingest | Real-to-Sim High-Resolution Cloth Modeling: Physical Parameter Optimization Using Particle-Based Simulation (JCDE 2025)
+- Notas creadas: [[ClothParamOpt_PBD_JCDE2025]]
+- Notas actualizadas: index.md
+- Contradicciones encontradas: ninguna; resuelve la brecha PBD de [[RealToSim_DynamicFabric_2025]] — primer paper que optimiza k'_s/k'_b/c'/μ directamente sobre simulador particle-based; hereda la limitación de no validar en dinámico
