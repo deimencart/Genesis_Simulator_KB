@@ -52,3 +52,9 @@
 - Notas creadas: [[FoldingTwoParams_FrontNR2022]]
 - Notas actualizadas: index.md
 - Contradicciones encontradas: ninguna; converge con [[ClothParamOpt_PBD_JCDE2025]] en que friction es el parámetro más crítico — evidencia independiente desde FEM/C-IPC y PBD/Taichi
+
+## [2026-07-06] ingest | ManiSkill-HAB: A Benchmark for Low-Level Manipulation in Home Rearrangement Tasks (arXiv 2412.13211)
+- Notas creadas: [[ManiSkill_HAB_2024]]
+- Notas actualizadas: index.md
+- Contradicciones encontradas: ninguna
+- Nota: MS-HAB es referencia de arquitectura y throughput (4,109 SPS); no maneja deformables — para cloth seguir [[SoftGym_CoRL2020]] y [[ClothParamOpt_PBD_JCDE2025]]
