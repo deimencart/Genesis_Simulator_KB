@@ -16,7 +16,7 @@
 ## 03_AI_Training
 | Nota | Resumen | Status | Actualizado |
 |---|---|---|---|
-| [[Gym_Wrapper_Genesis]] | Estado de wrappers tipo Gymnasium para Genesis (genesis_lr) | draft | 2026-07-05 |
+| [[Gym_Wrapper_Genesis]] | Estado de wrappers tipo Gymnasium para Genesis (genesis_lr); arquitectura Handler+Env de RoboVerse | draft | 2026-07-06 |
 
 ## 04_Integration_ROS
 _(vacío — pendiente de primer ingest)_
@@ -29,6 +29,7 @@ _(vacío — pendiente de primer ingest)_
 | [[SoftGym_CoRL2020]] | Benchmark RL estándar para deformables (NVIDIA FleX/PBD); 6 tareas de tela/agua; CEM > SAC > imagen | draft | 2026-07-05 |
 | [[GarmentLab_NeurIPS2024]] | Benchmark NeurIPS 2024 (Isaac Sim, PBD+FEM); 20 tareas; RL <15% vs visión ~60%; sim2real con 3 métodos | draft | 2026-07-06 |
 | [[Petrik_GarmentFolding_IROS2016]] | Modelo Euler-Bernoulli para trayectorias de doblado; parámetro ηᵦ=peso/rigidez; contrasta con PBD | draft | 2026-07-06 |
+| [[RoboVerse_2025]] | Plataforma unificada multi-simulador; patrón Handler+Env (MetaSim); Tabla VI y física pendientes del PDF | draft | 2026-07-06 |
 
 ## 06_Code_Snippets
 | Nota | Resumen | Status | Actualizado |

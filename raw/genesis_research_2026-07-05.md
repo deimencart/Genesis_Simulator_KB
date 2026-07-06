@@ -3,6 +3,7 @@
 > Este archivo es INMUTABLE. No editar aquí — solo extraer y filtrar hacia el wiki.
 
 ## Papers pendientes de ingestar como notas atómicas en 05_Literature_Review/
+- RoboVerse: Towards a Unified Platform, Dataset and Benchmark for Scalable and Generalizable Robot Learning (UC Berkeley et al., Pieter Abbeel, 2025) — https://arxiv.org/abs/2504.18904 [agregado 2026-07-06]
 - Real-to-sim high-resolution cloth modeling (JCDE) — https://academic.oup.com/jcde/article/12/8/29/8206149
 - Physics-Based Model of Rectangular Garment for Robotic Folding (Petrik, IROS 2016) — https://cmp.felk.cvut.cz/ftp/articles/petrik/PetrikIROS2016.pdf
 - Can Real-to-Sim Approaches Capture Dynamic Fabric Behavior... — https://arxiv.org/html/2503.16310v1

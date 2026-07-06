@@ -30,3 +30,9 @@
 - Notas actualizadas: index.md
 - Contradicciones encontradas: ninguna; modelo Euler-Bernoulli (analítico, estático) contrasta con PBD de [[PBD_Cloth_Solver]] (partículas, dinámico) — son enfoques complementarios, no contradictorios
 - Nota: PDF original ilegible (binario); contenido reconstruido desde papers de seguimiento (arXiv 1902.11021, 1904.01298) y búsqueda web
+
+## [2026-07-06] ingest | RoboVerse: Towards a Unified Platform, Dataset and Benchmark for Scalable and Generalizable Robot Learning (arXiv 2504.18904)
+- Notas creadas: [[RoboVerse_2025]]
+- Notas actualizadas: [[Gym_Wrapper_Genesis]] (sección Handler+Env añadida), index.md, raw/genesis_research_2026-07-05.md (paper añadido a la lista)
+- Contradicciones encontradas: ninguna
+- Nota: Tabla VI (comparativa de simuladores) y experimentos de conservación física no accesibles en HTML — pendiente de completar desde el PDF directamente en [[RoboVerse_2025]]
