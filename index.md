@@ -5,13 +5,20 @@
 ## 01_Physics_Engines
 | Nota | Resumen | Status | Actualizado |
 |---|---|---|---|
-| [[Genesis_Simulator]] | Hub: arquitectura de Genesis (4 capas), solvers disponibles | draft | 2026-07-05 |
+| [[Genesis_Simulator]] | Hub: Genesis World, solvers (PBD/FEM/IPC/MPM/SPH), Quadrants compiler | draft | 2026-07-06 |
 | [[PBD_Cloth_Solver]] | Solver PBD para tela: parámetros, compliance, iteraciones | draft | 2026-07-05 |
+| [[Genesis_Config_System]] | Todos los *Options y materiales del config system (fuente: repo oficial) | validated | 2026-07-06 |
+| [[Genesis_Cloth_PBD_Examples]] y [[Genesis_Cloth_IPC_Examples]] | (→ dividida; ver PBD y IPC) | draft | 2026-07-06 |
+| [[Genesis_Cloth_PBD_Examples]] | pbd_cloth.py + cloth_on_rigid.py + patrón add_camera/start_recording | validated | 2026-07-06 |
+| [[Genesis_Cloth_IPC_Examples]] | ipc_robot_cloth_teleop.py (robot+cloth FEM, friction_mu=0.5) — hallazgo prioritario | validated | 2026-07-06 |
+| [[Genesis_Installation]] | Instalación genesis-world: pip/fuente, backends CUDA/Metal/ROCm, extras | validated | 2026-07-06 |
+| [[Genesis_Simulation_Interface]] | Carga de robots MJCF/URDF, DOF control, IK, n_envs paralelos, sensores, cámaras | validated | 2026-07-06 |
 
 ## 02_Robotics
 | Nota | Resumen | Status | Actualizado |
 |---|---|---|---|
 | [[UR10e_2F85_Genesis]] | Carga y control del UR10e + gripper 2F-85 en Genesis | validated | 2026-07-05 |
+| [[UR10e_Gripper_Cloth_Issues]] | Slippage gripper-tela: causas (friction 0.15 vs 0.5), parámetros a corregir | issue | 2026-07-06 |
 
 ## 03_AI_Training
 | Nota | Resumen | Status | Actualizado |

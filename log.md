@@ -70,3 +70,53 @@
 - Notas actualizadas: index.md
 - Contradicciones encontradas: ninguna
 - Nota: relevancia baja para el proyecto — hardware custom (no 2F-85), UR5 (no UR10e), folding (no unfolding), sin simulación ni Genesis; documentado por completitud del literature review
+
+## [2026-07-06] ingest | Genesis Config System (genesis/options/solvers.py + genesis/engine/materials/)
+- Notas creadas: [[Genesis_Config_System]]
+- Notas actualizadas: [[Genesis_Simulator]] (enlaces a las 3 notas nuevas), index.md
+- Contradicciones encontradas: resuelve C1 del lint — Genesis sí soporta `PBD.Cloth` y `FEM.Cloth`; RoboVerse los clasifica bajo "Soft" en su taxonomía, no es contradicción de soporte real
+
+## [2026-07-06] ingest | Genesis GitHub issues #161 y #484 (cloth simulation examples)
+- Notas creadas: [[Genesis_Cloth_PBD_Examples]] y [[Genesis_Cloth_IPC_Examples]]
+- Notas actualizadas: index.md
+- Contradicciones encontradas: ninguna; #484 cerrado sin respuesta oficial — requisitos de malla deducidos del solver, no documentación explícita
+
+## [2026-07-06] ingest | Genesis README (instalación, backends, requisitos)
+- Notas creadas: [[Genesis_Installation]]
+- Notas actualizadas: index.md
+- Contradicciones encontradas: ninguna; clarifica que FEM.Cloth requiere pyuipc (Linux/Windows NVIDIA), PBD.Cloth no requiere extras
+
+## [2026-07-06] ingest | Genesis Cloth Examples — 3 ejemplos oficiales (pbd_cloth.py, cloth_on_rigid.py, ipc_robot_cloth_teleop.py)
+- Notas creadas: ninguna nueva (actualización completa de [[Genesis_Cloth_PBD_Examples]] y [[Genesis_Cloth_IPC_Examples]])
+- Notas actualizadas: [[Genesis_Cloth_PBD_Examples]] y [[Genesis_Cloth_IPC_Examples]] (reemplazado: código real de 3 ejemplos oficiales + patrón cámara/grabación), index.md
+- Contradicciones encontradas: ninguna; hallazgo crítico — ipc_robot_cloth_teleop usa FEM.Cloth con friction_mu=0.5 vs default PBD.Cloth de 0.15 → explica slippage
+
+## [2026-07-06] ingest | Genesis Simulation Interface (examples/tutorials/: control_your_robot, parallel_simulation, visualization; examples/sensors/)
+- Notas creadas: [[Genesis_Simulation_Interface]]
+- Notas actualizadas: [[Genesis_Simulator]] (renombrado a Genesis World, Quadrants=fork Taichi, IPC solver añadido, enlace a Simulation Interface), index.md
+- Contradicciones encontradas: ninguna
+
+## [2026-07-06] investigación | UR10e gripper slippage (issue #199 + ipc_robot_cloth_teleop + Genesis_Config_System)
+- Notas creadas: [[UR10e_Gripper_Cloth_Issues]]
+- Notas actualizadas: index.md
+- Contradicciones encontradas: ninguna; confirma friction como causa principal (converge con [[ClothParamOpt_PBD_JCDE2025]] y [[FoldingTwoParams_FrontNR2022]])
+
+## [2026-07-06] lint-fix | Resolución contradicción C1 — Genesis World sí soporta cloth
+- Notas creadas: ninguna
+- Notas actualizadas: [[RoboVerse_2025]] (nota aclaratoria añadida en Tabla VI: "Rigid; Soft" es simplificación de taxonomía RoboVerse, no limitación de Genesis)
+- Contradicciones encontradas: ninguna (C1 resuelto con evidencia de 3 ejemplos oficiales + código fuente)
+
+## [2026-07-06] refactor | División de Genesis_Cloth_Examples en dos notas atómicas
+- Notas creadas: [[Genesis_Cloth_PBD_Examples]], [[Genesis_Cloth_IPC_Examples]]
+- Notas actualizadas: [[Genesis_Cloth_PBD_Examples]] y [[Genesis_Cloth_IPC_Examples]] (stub redirect), [[Genesis_Simulator]], [[Genesis_Simulation_Interface]], [[Genesis_Config_System]], [[RoboVerse_2025]], [[UR10e_Gripper_Cloth_Issues]], index.md
+- Contradicciones encontradas: ninguna; todos los wikilinks de [[Genesis_Cloth_PBD_Examples]] y [[Genesis_Cloth_IPC_Examples]] actualizados a la nota correcta según contenido
+
+## [2026-07-06] planning | Creación de ROADMAP.md (6 fases: Franka baseline → cámara → cloth calibration → UR10e debug → manipulación avanzada → Gymnasium)
+- Notas creadas: ninguna (ROADMAP.md no es una nota atómica — no va en index.md)
+- Notas actualizadas: CLAUDE.md (referencia a ROADMAP.md añadida como ítem 3 en la lista de lectura inicial)
+- Contradicciones encontradas: ninguna
+
+## [2026-07-06] investigación | coup_friction por link en Genesis World (Rigid material API)
+- Notas creadas: ninguna (contenido añadido a [[UR10e_Gripper_Cloth_Issues]])
+- Notas actualizadas: [[UR10e_Gripper_Cloth_Issues]] (sección nueva: coup_friction es entity-level; set_friction() es rigid-rigid solo; 3 opciones documentadas; Opción A recomendada)
+- Contradicciones encontradas: ninguna; coup_friction default=0.1 (confirmado en código fuente), no existe API pública per-link para coup_friction

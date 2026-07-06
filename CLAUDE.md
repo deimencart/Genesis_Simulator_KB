@@ -6,7 +6,8 @@ cualquier cosa (ingestar una fuente, responder una pregunta, o revisar el vault)
 1. `00_Core_Schema/SCHEMA.md` — reglas de estructura, atomicidad, frontmatter y flujos.
 2. `index.md` — catálogo de todas las páginas existentes (léelo ANTES de crear una nota
    nueva, para no duplicar y para saber a qué enlazar).
-3. `log.md` — historial cronológico de ingests/queries/lints (solo las últimas 5-10
+3. `ROADMAP.md` — estado actual del proyecto, fase activa y tareas pendientes por fase.
+4. `log.md` — historial cronológico de ingests/queries/lints (solo las últimas 5-10
    entradas suelen bastar de contexto).
 
 ## Reglas duras (no negociables)

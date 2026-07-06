@@ -64,6 +64,14 @@ unificado para deformables/cloth entre simuladores a fecha del paper.
 | Genesis [2] | Genesis | Rasterization<br>RayTracing | RGBD; Force; Tactile | Rigid; Soft | ✓ | ✓ |
 
 Referencia: image_b3bf03.png
+
+> **Resolución de C1 (lint 2026-07-06):** La clasificación "Rigid; Soft" para Genesis
+> en esta tabla es una **simplificación de la taxonomía de RoboVerse**, no una limitación
+> real del motor. El código fuente de Genesis World (`genesis/engine/materials/PBD/cloth.py`
+> y `genesis/engine/materials/FEM/cloth.py`) confirma soporte explícito para cloth, con
+> tres ejemplos oficiales: `examples/tutorials/pbd_cloth.py`,
+> `examples/coupling/cloth_on_rigid.py` y `examples/IPC_Solver/ipc_robot_cloth_teleop.py`.
+> Ver [[Genesis_Cloth_PBD_Examples]], [[Genesis_Cloth_IPC_Examples]] y [[Genesis_Config_System]] para evidencia directa.
 ## Experimentos de conservación de leyes físicas
 
 > **Pendiente de completar.** El hallazgo de que ningún simulador conserva
