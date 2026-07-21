@@ -19,12 +19,40 @@ interpolación suave, y documentar el patrón completo como baseline.
 
 **Nota destino:** `02_Robotics/Franka_Control_Baseline.md` (pendiente de crear)
 
-- [ ] Cargar Franka con `gs.morphs.MJCF` (archivo XML oficial del repo Genesis World)
-- [ ] Obtener índices de joints por nombre con `get_joint().dofs_idx_local`
-- [ ] Configurar ganancias: `set_dofs_kp`, `set_dofs_kv`, `set_dofs_force_range`
-- [ ] Probar los 3 modos: `control_dofs_position` / `_velocity` / `_force`
-- [ ] Trayectoria con waypoints + interpolación smoothstep entre ellos
-- [ ] Documentar patrón completo en nota nueva, enlazando a [[Genesis_Simulation_Interface]]
+- [x] Cargar Franka con `gs.morphs.MJCF` (archivo XML oficial del repo Genesis World) —
+  `1_load_franka.py`, documentado en [[Franka_Control_Baseline]].
+- [x] Obtener índices de joints por nombre con `get_joint().dofs_idx_local` —
+  patrón repetido en todos los scripts desde `2_franka_mapping_joints.py`.
+- [x] Configurar ganancias: `set_dofs_kp`, `set_dofs_kv`, `set_dofs_force_range` —
+  3 variantes reales verificadas (`2_franka_mapping_joints.py`,
+  `2_2_robot_tuto_control_your_robot.py`, `5_2_set_force_2joints.py`); ver
+  Hallazgo 3 en [[Franka_Force_Range_Experiment]] para la confirmación de que
+  `set_dofs_force_range` propio se respeta sobre el default del MJCF.
+- [ ] Probar los 3 modos: `control_dofs_position` / `_velocity` / `_force` —
+  **parcial**: posición y fuerza verificados con lectura real
+  (`get_dofs_position`/`get_dofs_force`) en varios scripts propios; velocidad
+  solo comandada una vez, dentro del tutorial oficial copiado
+  (`2_2_robot_tuto_control_your_robot.py`, steps 750-1000, 1 DOF), **sin
+  verificar con `get_dofs_velocity()`** — falta experimento propio. Ver
+  [[Franka_Control_Baseline]] sección 4.
+- [ ] Trayectoria con waypoints + interpolación smoothstep entre ellos —
+  **parcial**: `3_inverse_kinematics.py` interpola pero solo un segmento
+  (inicio→un target IK) y con interpolación **lineal**, no smoothstep;
+  `2_2_robot_tuto_control_your_robot.py` tiene varios waypoints pero sin
+  interpolación (saltos directos). Falta combinar ambas cosas — ver detalle
+  en [[Franka_Control_Baseline]] sección 5.
+- [x] Documentar patrón completo en nota nueva, enlazando a [[Genesis_Simulation_Interface]] —
+  ver [[Franka_Control_Baseline]] (cubre ítems 1-4; ítem de waypoints queda
+  documentado como pendiente ahí mismo).
+- [x] Mapeo de alcanzabilidad del workspace (IK sampling, esferas verde/rojo) —
+  ver [[Franka_Workspace_Reachability]] y [[Franka_Reachability_Sampling]].
+  Extensión no prevista en el plan original de esta fase, agregada porque
+  informa directamente la Fase 3 (posible causa del slippage del UR10e).
+- [x] Force range del actuador vs. fuerza de reacción por límite articular —
+  ver [[Franka_Force_Range_Experiment]] y [[Franka_Force_Range_Limits]].
+  Extensión no prevista en el plan original, agregada porque originó la
+  hipótesis de "sostén insuficiente del brazo" documentada (como pendiente
+  de verificar) en [[UR10e_Gripper_Cloth_Issues]] para Fase 3.
 
 ---
 
@@ -141,5 +169,22 @@ siguiendo [[Gymnasium_API_2024]] y el patrón Handler+Env de [[RoboVerse_2025]].
 ## Estado actual
 
 **Fase activa:** Fase 0 — Carga y control base del robot (Franka)
-**Última actualización:** 2026-07-06
-**Progreso global:** 0 / 6 fases completadas
+**Última actualización:** 2026-07-21
+**Progreso global:** 0 / 6 fases completadas (Fase 0 al 4/6 de sus ítems núcleo)
+
+**Foco inmediato (siguiente sesión):** dos ítems abiertos en Fase 0 —
+1. **Control de velocidad sin verificar** (ver [[Franka_Control_Baseline]]
+   sección 4): escribir un experimento propio con `control_dofs_velocity`
+   que lea `get_dofs_velocity()` y confirme el valor real alcanzado —
+   posición y fuerza ya tienen esa verificación, velocidad no.
+2. **Waypoints + interpolación smoothstep** (sección 5): combinar múltiples
+   waypoints (patrón de `2_2_robot_tuto_control_your_robot.py`) con una
+   función smoothstep real entre ellos (hoy solo hay interpolación lineal
+   de un solo segmento en `3_inverse_kinematics.py`).
+
+Al cerrar ambos, Fase 0 queda completa y se puede pasar a Fase 1 (cámara).
+
+**Pendiente de verificar (bloquea Fase 3):** la hipótesis de "sostén
+insuficiente del brazo" en [[UR10e_Gripper_Cloth_Issues]] — replicar el
+experimento de [[Franka_Force_Range_Experiment]] sobre el UR10e para confirmar
+si el brazo cede durante el pico de fuerza de agarre.

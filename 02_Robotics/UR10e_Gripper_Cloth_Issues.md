@@ -2,8 +2,8 @@
 category: [robotics, simulation]
 status: issue
 created: 2026-07-06
-updated: 2026-07-06
-tags: [ur10e, gripper, 2f-85, cloth, slippage, friction, contact, pbd]
+updated: 2026-07-12
+tags: [ur10e, gripper, 2f-85, cloth, slippage, friction, contact, pbd, force-range]
 ---
 
 # UR10e + 2F-85: Problema de Slippage en Agarre de Tela
@@ -149,6 +149,34 @@ ur10e = scene.add_entity(
 )
 ```
 
+## Hipótesis adicional: sostén insuficiente del brazo durante agarre
+
+> **HIPÓTESIS PENDIENTE DE VERIFICAR — no es causa confirmada.** Se agrega
+> como candidato adicional a investigar, no reemplaza las Causas 1-4 de
+> arriba (fricción sigue siendo la explicación más probable).
+
+[[Franka_Force_Range_Experiment]] muestra, con el Franka (no el UR10e), que
+un DOF sin `set_dofs_kp`/`set_dofs_kv` ni fuerza sostenida activa cede bajo
+gravedad y el peso del resto de la cadena cinemática — verificado
+empíricamente: `joint2` se desplaza +1.79 rad en 100 steps mientras solo
+`joint5` recibía control de fuerza, sin ningún comando sobre los demás DOFs.
+
+**Hipótesis:** si al aplicar fuerza de agarre en los dedos del 2F-85 el resto
+del brazo UR10e no tiene `kp`/`kv` suficientes configurados, el brazo podría
+"ceder" ligeramente durante el agarre — un desplazamiento pequeño pero no
+nulo del gripper respecto a la tela justo en el momento de mayor fuerza de
+contacto, que podría leerse como slippage aunque la fricción esté bien
+calibrada. No hay evidencia todavía de que esto ocurra específicamente en el
+UR10e+2F-85 de este proyecto — es una hipótesis extrapolada de un experimento
+hecho con el Franka, en un contexto distinto (sin tela, sin gripper 2F-85).
+
+**Cómo verificar (pendiente):** repetir un experimento análogo al de
+[[Franka_Force_Range_Experiment]] sobre el UR10e — confirmar que
+`set_dofs_kp`/`set_dofs_kv` estén configurados en los 6 DOFs del brazo (no
+solo en los dedos del gripper) durante los intentos de agarre documentados en
+este issue, y medir si hay desplazamiento del brazo (no solo de los dedos)
+durante el pico de fuerza de contacto con la tela.
+
 ## Relacionado
 - [[UR10e_2F85_Genesis]] — configuración del robot; slippage como issue abierto
 - [[Genesis_Config_System]] — parámetros completos de PBD.Cloth y Rigid
@@ -156,3 +184,4 @@ ur10e = scene.add_entity(
 - [[Genesis_Cloth_IPC_Examples]] — ejemplo ipc_robot_cloth_teleop: friction_mu=0.5 oficial
 - [[ClothParamOpt_PBD_JCDE2025]] — friction es el parámetro más crítico (confirma)
 - [[FoldingTwoParams_FrontNR2022]] — idem desde FEM/C-IPC (confirma independientemente)
+- [[Franka_Force_Range_Experiment]] — origen de la hipótesis de sostén insuficiente del brazo

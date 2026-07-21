@@ -18,7 +18,10 @@
 | Nota | Resumen | Status | Actualizado |
 |---|---|---|---|
 | [[UR10e_2F85_Genesis]] | Carga y control del UR10e + gripper 2F-85 en Genesis | validated | 2026-07-05 |
-| [[UR10e_Gripper_Cloth_Issues]] | Slippage gripper-tela: causas (friction 0.15 vs 0.5), parámetros a corregir | issue | 2026-07-06 |
+| [[UR10e_Gripper_Cloth_Issues]] | Slippage gripper-tela: causas (friction 0.15 vs 0.5), parámetros a corregir; + hipótesis sostén insuficiente del brazo (pendiente verificar) | issue | 2026-07-12 |
+| [[Franka_Workspace_Reachability]] | Mapeo de alcanzabilidad por sampling+IK (N=200, 113 alcanzables=56.5%): límite máximo real ~0.85-1.0m verificado; límite mínimo NO verificado (solo exclusión de diseño); orientación fija (limitación) | validated | 2026-07-09 |
+| [[Franka_Force_Range_Experiment]] | force_range topa el actuador (12.0 Nm exacto) pero el pico grande (-177 a -206 Nm) es fuerza de reacción de contacto al chocar el límite de posición; DOF sin control cede bajo gravedad (joint2 +1.79 rad); set_dofs_force_range propio confirmado que se respeta sobre el default | validated | 2026-07-21 |
+| [[Franka_Control_Baseline]] | Carga MJCF, índices de joints, ganancias kp/kv/force_range (3 variantes); posición y fuerza verificados, velocidad SIN verificar (solo comandada); waypoints+smoothstep pendiente | draft | 2026-07-21 |
 
 ## 03_AI_Training
 | Nota | Resumen | Status | Actualizado |
@@ -48,3 +51,5 @@ _(vacío — pendiente de primer ingest)_
 | Nota | Resumen | Status | Actualizado |
 |---|---|---|---|
 | [[PBD_Cloth_Config_Denim]] | Config de PBD.Cloth calibrada para mezclilla | draft | 2026-07-05 |
+| [[Franka_Reachability_Sampling]] | Código: sampling+IK para mapeo de alcanzabilidad, visualización esferas verde/rojo | validated | 2026-07-09 |
+| [[Franka_Force_Range_Limits]] | Código real v1/v2/v3: control_dofs_force excesivo a un DOF, tracking + gráfica fuerza/posición, override de force_range propio | validated | 2026-07-21 |
